@@ -1,14 +1,14 @@
 import { StyleSheet, View } from "react-native";
-import LectureApp, { styles } from "./LectureApp";
+import { styles } from "./LectureApp";
 
-/**
- * DO NOT MODIFY THIS FILE
- */
+import TasksView, { addTask } from "./TasksView";
 
 export default function App() {
+  addTask();
+
   return (
     <View style={[appStyles.safeArea, styles.topLevelContainer]}>
-      <LectureApp />
+      <TasksView />
     </View>
   );
 }
